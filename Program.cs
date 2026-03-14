@@ -19,10 +19,33 @@ class Program
         //StateBased
         DoorMachine pintu = new DoorMachine();
 
-        Console.WriteLine("Simulasi pintu:");
-        pintu.Buka();
-        pintu.Kunci();
+        while (true)
+        {
+            Console.WriteLine();
+            Console.WriteLine("Pilih aksi:");
+            Console.WriteLine("1. Buka Pintu");
+            Console.WriteLine("2. Kunci Pintu");
+            Console.WriteLine("3. Keluar");
 
-        Console.ReadLine();
+            Console.Write("Input: ");
+            string pilihan = Console.ReadLine();
+
+            if (pilihan == "1")
+            {
+                pintu.Buka();
+            }
+            else if (pilihan == "2")
+            {
+                pintu.Kunci();
+            }
+            else if (pilihan == "3")
+            {
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Input tidak valid");
+            }
+        }
     }
 }

@@ -1,38 +1,44 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 class DoorMachine
 {
-    private enum State
+    enum State
     {
         Terkunci,
         Terbuka
     }
 
-    private State currentState;
+    private State stateSaatIni;
 
     public DoorMachine()
     {
-        currentState = State.Terkunci;
+        stateSaatIni = State.Terkunci;
         Console.WriteLine("Pintu terkunci");
     }
 
     public void Buka()
     {
-        if (currentState == State.Terkunci)
+        if (stateSaatIni == State.Terkunci)
         {
-            currentState = State.Terbuka;
-            Console.WriteLine("Pintu tidak terkunci");
+            stateSaatIni = State.Terbuka;
+            Console.WriteLine("Pintu terbuka");
+        }
+        else
+        {
+            Console.WriteLine("Pintu sudah terbuka");
         }
     }
 
     public void Kunci()
     {
-        if (currentState == State.Terbuka)
+        if (stateSaatIni == State.Terbuka)
         {
-            currentState = State.Terkunci;
+            stateSaatIni = State.Terkunci;
             Console.WriteLine("Pintu terkunci");
+        }
+        else
+        {
+            Console.WriteLine("Pintu sudah terkunci");
         }
     }
 }
