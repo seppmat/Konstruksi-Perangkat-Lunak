@@ -1,0 +1,10 @@
+D:\Kuliah\Konstruksi Perangkat Lunak\TUBES\aplikasiManajemenTugas\WindowsFormsApp1\obj\Debug\TaskManagerApp.csproj.AssemblyReference.cache
+D:\Kuliah\Konstruksi Perangkat Lunak\TUBES\aplikasiManajemenTugas\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Kuliah\Konstruksi Perangkat Lunak\TUBES\aplikasiManajemenTugas\WindowsFormsApp1\obj\Debug\TaskManagerApp.TaskForm.resources
+D:\Kuliah\Konstruksi Perangkat Lunak\TUBES\aplikasiManajemenTugas\WindowsFormsApp1\obj\Debug\TaskManagerApp.csproj.GenerateResource.cache
+D:\Kuliah\Konstruksi Perangkat Lunak\TUBES\aplikasiManajemenTugas\WindowsFormsApp1\obj\Debug\TaskManagerApp.csproj.CoreCompileInputs.cache
+D:\Kuliah\Konstruksi Perangkat Lunak\TUBES\aplikasiManajemenTugas\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Kuliah\Konstruksi Perangkat Lunak\TUBES\aplikasiManajemenTugas\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\Kuliah\Konstruksi Perangkat Lunak\TUBES\aplikasiManajemenTugas\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Kuliah\Konstruksi Perangkat Lunak\TUBES\aplikasiManajemenTugas\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\Kuliah\Konstruksi Perangkat Lunak\TUBES\aplikasiManajemenTugas\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
