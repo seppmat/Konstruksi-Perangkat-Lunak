@@ -9,6 +9,11 @@ class SayaTubeVideo
 
     public SayaTubeVideo(string title)
     {
+        if (string.IsNullOrEmpty(title) || title.Length > 200)
+        {
+            throw new ArgumentException("Judul tidak valid");
+        }
+
         Random random = new Random();
         this.id = random.Next(10000, 99999);
         this.title = title;
@@ -17,7 +22,22 @@ class SayaTubeVideo
 
     public void IncreasePlayCount(int count)
     {
-        this.playCount += count;
+        if (count < 0 || count > 25000000)
+        {
+            throw new ArgumentException("Input play count tidak valid");
+        }
+
+        try
+        {
+            checked
+            {
+                this.playCount += count;
+            }
+        }
+        catch (OverflowException)
+        {
+            Console.WriteLine("Terjadi overflow pada play count");
+        }
     }
 
     public int GetPlayCount()
@@ -29,13 +49,6 @@ class SayaTubeVideo
     {
         return title;
     }
-
-    public void PrintVideoDetails()
-    {
-        Console.WriteLine("ID: " + id);
-        Console.WriteLine("Title: " + title);
-        Console.WriteLine("Play Count: " + playCount);
-    }
 }
 
 class SayaTubeUser
@@ -46,6 +59,11 @@ class SayaTubeUser
 
     public SayaTubeUser(string username)
     {
+        if (string.IsNullOrEmpty(username) || username.Length > 100)
+        {
+            throw new ArgumentException("Username tidak valid");
+        }
+
         Random random = new Random();
         this.id = random.Next(10000, 99999);
         this.username = username;
@@ -64,17 +82,26 @@ class SayaTubeUser
 
     public void AddVideo(SayaTubeVideo video)
     {
+        if (video == null)
+        {
+            throw new ArgumentException("Video tidak boleh null");
+        }
+
+        if (video.GetPlayCount() >= int.MaxValue)
+        {
+            throw new ArgumentException("Play count melebihi batas");
+        }
+
         uploadedVideos.Add(video);
     }
 
     public void PrintAllVideoPlaycount()
     {
         Console.WriteLine("User: " + username);
-        int i = 1;
-        foreach (var video in uploadedVideos)
+        int max = Math.Min(8, uploadedVideos.Count);
+        for (int i = 0; i < max; i++)
         {
-            Console.WriteLine("Video " + i + " judul: " + video.GetTitle());
-            i++;
+            Console.WriteLine("Video " + (i + 1) + " judul: " + uploadedVideos[i].GetTitle());
         }
     }
 }
@@ -83,35 +110,43 @@ class Program
 {
     static void Main(string[] args)
     {
-        SayaTubeUser user = new SayaTubeUser("Yosep");
+        try
+        {
+            SayaTubeUser user = new SayaTubeUser("Yosep");
 
-        SayaTubeVideo v1 = new SayaTubeVideo("Review Film Interstellar oleh Yosep");
-        SayaTubeVideo v2 = new SayaTubeVideo("Review Film Inception oleh Yosep");
-        SayaTubeVideo v3 = new SayaTubeVideo("Review Film The Dark Knight oleh Yosep");
-        SayaTubeVideo v4 = new SayaTubeVideo("Review Film Parasite oleh Yosep");
-        SayaTubeVideo v5 = new SayaTubeVideo("Review Film Avengers Endgame oleh Yosep");
-        SayaTubeVideo v6 = new SayaTubeVideo("Review Film Joker oleh Yosep");
-        SayaTubeVideo v7 = new SayaTubeVideo("Review Film Whiplash oleh Yosep");
-        SayaTubeVideo v8 = new SayaTubeVideo("Review Film Fight Club oleh Yosep");
-        SayaTubeVideo v9 = new SayaTubeVideo("Review Film Forrest Gump oleh Yosep");
-        SayaTubeVideo v10 = new SayaTubeVideo("Review Film The Matrix oleh Yosep");
+            List<SayaTubeVideo> videos = new List<SayaTubeVideo>()
+            {
+                new SayaTubeVideo("Review Film Interstellar oleh Yosep"),
+                new SayaTubeVideo("Review Film Inception oleh Yosep"),
+                new SayaTubeVideo("Review Film The Dark Knight oleh Yosep"),
+                new SayaTubeVideo("Review Film Parasite oleh Yosep"),
+                new SayaTubeVideo("Review Film Avengers Endgame oleh Yosep"),
+                new SayaTubeVideo("Review Film Joker oleh Yosep"),
+                new SayaTubeVideo("Review Film Whiplash oleh Yosep"),
+                new SayaTubeVideo("Review Film Fight Club oleh Yosep"),
+                new SayaTubeVideo("Review Film Forrest Gump oleh Yosep"),
+                new SayaTubeVideo("Review Film The Matrix oleh Yosep")
+            };
 
-        user.AddVideo(v1);
-        user.AddVideo(v2);
-        user.AddVideo(v3);
-        user.AddVideo(v4);
-        user.AddVideo(v5);
-        user.AddVideo(v6);
-        user.AddVideo(v7);
-        user.AddVideo(v8);
-        user.AddVideo(v9);
-        user.AddVideo(v10);
+            foreach (var v in videos)
+            {
+                user.AddVideo(v);
+            }
 
-        v1.IncreasePlayCount(100);
-        v2.IncreasePlayCount(200);
-        v3.IncreasePlayCount(300);
+            foreach (var v in videos)
+            {
+                for (int i = 0; i < 300; i++)
+                {
+                    v.IncreasePlayCount(10000000);
+                }
+            }
 
-        user.PrintAllVideoPlaycount();
-        Console.WriteLine("Total Play Count: " + user.GetTotalVideoPlayCount());
+            user.PrintAllVideoPlaycount();
+            Console.WriteLine("Total Play Count: " + user.GetTotalVideoPlayCount());
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
     }
 }
