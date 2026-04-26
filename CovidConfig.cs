@@ -5,21 +5,15 @@ using System.Text.Json.Serialization;
 
 namespace tpModul8
 {
-    internal class CovidConfig
+    public class CovidConfig
     {
-        [JsonPropertyName("satuan_suhu")]
         public string SatuanSuhu { get; set; } = "celcius";
-
-        [JsonPropertyName("batas_hari_deman")]
         public int BatasHariDeman { get; set; } = 14;
-
-        [JsonPropertyName("pesan_ditolak")]
         public string PesanDitolak { get; set; } = "Anda tidak diperbolehkan masuk ke dalam gedung ini";
-
-        [JsonPropertyName("pesan_diterima")]
         public string PesanDiterima { get; set; } = "Anda dipersilahkan untuk masuk ke dalam gedung ini";
 
         private const string FilePath = "covid_config.json";
+        private static readonly JsonSerializerOptions JsonOptions = new() { WriteIndented = true };
 
         public CovidConfig()
         {
@@ -28,13 +22,14 @@ namespace tpModul8
                 try
                 {
                     string json = File.ReadAllText(FilePath);
-                    var loaded = JsonSerializer.Deserialize<CovidConfig>(json);
-                    if (loaded != null)
+                    var data = JsonSerializer.Deserialize<ConfigDto>(json);
+
+                    if (data != null)
                     {
-                        SatuanSuhu = loaded.SatuanSuhu;
-                        BatasHariDeman = loaded.BatasHariDeman;
-                        PesanDitolak = loaded.PesanDitolak;
-                        PesanDiterima = loaded.PesanDiterima;
+                        SatuanSuhu = data.SatuanSuhu ?? SatuanSuhu;
+                        BatasHariDeman = data.BatasHariDeman != 0 ? data.BatasHariDeman : BatasHariDeman;
+                        PesanDitolak = data.PesanDitolak ?? PesanDitolak;
+                        PesanDiterima = data.PesanDiterima ?? PesanDiterima;
                     }
                 }
                 catch { }
@@ -50,8 +45,29 @@ namespace tpModul8
 
         private void Save()
         {
-            var opts = new JsonSerializerOptions { WriteIndented = true };
-            File.WriteAllText(FilePath, JsonSerializer.Serialize(this, opts));
+            var data = new ConfigDto
+            {
+                SatuanSuhu = SatuanSuhu,
+                BatasHariDeman = BatasHariDeman,
+                PesanDitolak = PesanDitolak,
+                PesanDiterima = PesanDiterima
+            };
+            File.WriteAllText(FilePath, JsonSerializer.Serialize(data, JsonOptions));
         }
+    }
+
+    internal class ConfigDto
+    {
+        [JsonPropertyName("satuan_suhu")]
+        public string SatuanSuhu { get; set; }
+
+        [JsonPropertyName("batas_hari_deman")]
+        public int BatasHariDeman { get; set; }
+
+        [JsonPropertyName("pesan_ditolak")]
+        public string PesanDitolak { get; set; }
+
+        [JsonPropertyName("pesan_diterima")]
+        public string PesanDiterima { get; set; }
     }
 }
