@@ -1,0 +1,18 @@
+{
+  "lang": "en",
+  "transfer": {
+    "Threshold": 25000000,
+    "LowFee": 6500,
+    "HighFee": 15000
+  },
+  "methods": [
+    "RTO (real-time)",
+    "SKN",
+    "RTGS",
+    "BI FAST"
+  ],
+  "confirmation": {
+    "en": "yes",
+    "id": "ya"
+  }
+}
