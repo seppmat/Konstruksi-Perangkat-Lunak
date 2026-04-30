@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "jurnalModul10/1.0.0": {
+        "dependencies": {
+          "MatametikaLibraries": "1.0.0"
+        },
+        "runtime": {
+          "jurnalModul10.dll": {}
+        }
+      },
+      "MatametikaLibraries/1.0.0": {
+        "runtime": {
+          "MatametikaLibraries.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "jurnalModul10/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MatametikaLibraries/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
