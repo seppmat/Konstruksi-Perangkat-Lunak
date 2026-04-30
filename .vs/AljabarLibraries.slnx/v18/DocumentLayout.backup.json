@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Kuliah\\Konstruksi Perangkat Lunak\\Pertemuan 10\\AljabarLibraries\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{20C9FC47-40A8-4E26-8E44-BDB0FB5AE210}|tpModul10\\tpModul10.csproj|d:\\kuliah\\konstruksi perangkat lunak\\pertemuan 10\\aljabarlibraries\\tpmodul10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20C9FC47-40A8-4E26-8E44-BDB0FB5AE210}|tpModul10\\tpModul10.csproj|solutionrelative:tpmodul10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6408CEC-9999-4471-A00D-443BC58D4A6B}|AljabarLibraries\\AljabarLibraries.csproj|d:\\kuliah\\konstruksi perangkat lunak\\pertemuan 10\\aljabarlibraries\\aljabarlibraries\\aljabar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6408CEC-9999-4471-A00D-443BC58D4A6B}|AljabarLibraries\\AljabarLibraries.csproj|solutionrelative:aljabarlibraries\\aljabar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Kuliah\\Konstruksi Perangkat Lunak\\Pertemuan 10\\AljabarLibraries\\tpModul10\\Program.cs",
+              "RelativeDocumentMoniker": "tpModul10\\Program.cs",
+              "ToolTip": "D:\\Kuliah\\Konstruksi Perangkat Lunak\\Pertemuan 10\\AljabarLibraries\\tpModul10\\Program.cs",
+              "RelativeToolTip": "tpModul10\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T14:54:07.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Aljabar.cs",
+              "DocumentMoniker": "D:\\Kuliah\\Konstruksi Perangkat Lunak\\Pertemuan 10\\AljabarLibraries\\AljabarLibraries\\Aljabar.cs",
+              "RelativeDocumentMoniker": "AljabarLibraries\\Aljabar.cs",
+              "ToolTip": "D:\\Kuliah\\Konstruksi Perangkat Lunak\\Pertemuan 10\\AljabarLibraries\\AljabarLibraries\\Aljabar.cs",
+              "RelativeToolTip": "AljabarLibraries\\Aljabar.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T14:53:49.668Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
