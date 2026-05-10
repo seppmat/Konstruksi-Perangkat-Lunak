@@ -1,0 +1,83 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Kuliah\\Konstruksi Perangkat Lunak\\Pertemuan 12\\tpModul12\\tpModul12_Test\\tpModul12_Test.csproj": {}
+  },
+  "projects": {
+    "D:\\Kuliah\\Konstruksi Perangkat Lunak\\Pertemuan 12\\tpModul12\\tpModul12\\tpModul12.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Kuliah\\Konstruksi Perangkat Lunak\\Pertemuan 12\\tpModul12\\tpModul12\\tpModul12.csproj",
+        "projectName": "tpModul12",
+        "projectPath": "D:\\Kuliah\\Konstruksi Perangkat Lunak\\Pertemuan 12\\tpModul12\\tpModul12\\tpModul12.csproj",
+        "UsingMicrosoftNETSdk": false,
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\Kuliah\\Konstruksi Perangkat Lunak\\Pertemuan 12\\tpModul12\\tpModul12_Test\\tpModul12_Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Kuliah\\Konstruksi Perangkat Lunak\\Pertemuan 12\\tpModul12\\tpModul12_Test\\tpModul12_Test.csproj",
+        "projectName": "tpModul12_Test",
+        "projectPath": "D:\\Kuliah\\Konstruksi Perangkat Lunak\\Pertemuan 12\\tpModul12\\tpModul12_Test\\tpModul12_Test.csproj",
+        "packagesPath": "C:\\Users\\DELL 5310\\.nuget\\packages\\",
+        "outputPath": "D:\\Kuliah\\Konstruksi Perangkat Lunak\\Pertemuan 12\\tpModul12\\tpModul12_Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\DELL 5310\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {
+              "D:\\Kuliah\\Konstruksi Perangkat Lunak\\Pertemuan 12\\tpModul12\\tpModul12\\tpModul12.csproj": {
+                "projectPath": "D:\\Kuliah\\Konstruksi Perangkat Lunak\\Pertemuan 12\\tpModul12\\tpModul12\\tpModul12.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.200"
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "MSTest": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="tpModul12/tpModul12.csproj" />
+  <Project Path="tpModul12_Test/tpModul12_Test.csproj" />
+</Solution>
